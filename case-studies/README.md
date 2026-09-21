@@ -1,10 +1,10 @@
-# Case Study Bank — Problem Bank PB-001…PB-064
+# Case Study Bank — Problem Bank PB-001…PB-065
 
 | Field | Value |
 |---|---|
 | Course | Computer Networks (BS CS / BS Data Science, Semester 4) |
 | Status | Draft v0.1 — awaiting instructor review |
-| Scope | **64 practice cases (PB-001…PB-064), two per lecture L01–L32** |
+| Scope | **65 practice cases (PB-001…PB-065), two per lecture L01–L32 (L29 carries three)** |
 | Relationship to the graded thread | Practice only. The graded Meridian cases are **CS-01…CS-04** (25% of course weight, see [`../docs/case-study-strategy.md`](../docs/case-study-strategy.md)); this bank rehearses the same reasoning with **zero direct grade weight** |
 | Evidence policy | Synthetic evidence (configs, command output, logs, metric tables) is **clearly labeled synthetic and internally consistent**; no real captures, logs, or measurements are claimed; packet-level evidence is *described*, never fabricated (§4) |
 | Files | Each case is one file: student version in the top half, instructor-only version below the horizontal rule — print/extract accordingly |

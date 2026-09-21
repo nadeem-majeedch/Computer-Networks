@@ -100,6 +100,6 @@ no empty placeholders.
 | `assessments/` | ✔ | Package built: quizzes W01–W16, review sets M1–M8, 7 banks, briefs, exams, rubrics (`docs/audit-reports/2026-09-20-assessment-package-audit.md`) |
 | `assets/`, `instructor/` | ✖ | Content phase (created when first used) |
 | `site-src/`, `mkdocs.yml`, `requirements.txt`, `.github/workflows/deploy-pages.yml`, `tools/scripts/build_site_docs.py`, `tools/scripts/validate_site.py` | ✔ | GitHub Pages site (MkDocs Material) — mirrors course sources student-visible-only; strict build + 26-check validation green (`docs-meta/github-pages-deployment-report.md`) |
-| `tools/scripts/` (audit/verification tools) | ✔ | Grows with each content phase |
+| `tools/scripts/` (audit/verification tools) | ✔ | Grows with each content phase — includes `check_readme_links.py` (relative-link/anchor validator) and `check_lab_env.py` (student host-tool self-check) |
 
 Rule: a directory may be added only together with at least one real file inside it.
