@@ -1,0 +1,116 @@
+# Computer Networks — course website configuration.
+#
+# Build pipeline: `python tools/scripts/build_site_docs.py` mirrors the course
+# sources into site/ (student-visible pages only; instructor-only files are
+# excluded there) and generates .generated_nav.yml + page enrichments.
+# CI runs both steps; see .github/workflows/deploy-pages.yml.
+#
+# URL layout: project site under /Computer-Networks/ (site_url below). All
+# generated links use directory-style URLs (use_directory_urls default).
+
+site_name: Computer Networks
+site_description: >-
+  A complete 32-lecture Computer Networks course for 4th-semester BS Computer
+  Science and BS Data Science students: theory, packet analysis, labs, case
+  studies, and a capstone.
+site_author: Course team
+site_url: https://nadeem-majeedch.github.io/Computer-Networks/
+
+repo_url: https://github.com/nadeem-majeedch/Computer-Networks
+repo_name: nadeem-majeedch/Computer-Networks
+
+# Keep the generated tree out of version control (see .gitignore).
+# .generated_nav.yml is produced by build_site_docs.py; the literate-nav
+# plugin consumes it. Run the generator before `mkdocs build` (CI does).
+docs_dir: site
+site_dir: _build/site
+
+# Strict build: any broken nav entry or invalid page fails CI.
+strict: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.path
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    # Auto day/night; students study late.
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+  - search
+  - literate-nav:
+      nav_file: .generated_nav.yml
+  - section-index
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight: {}
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nadeem-majeedch/Computer-Networks
+  generator: false
+
+copyright: >
+  Course materials for teaching use — see the References page for
+  attribution of cited standards and textbooks.

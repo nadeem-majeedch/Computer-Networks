@@ -1,0 +1,14 @@
+# Generated site output — deployed by GitHub Actions, never committed.
+site/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+
+.freebuff/

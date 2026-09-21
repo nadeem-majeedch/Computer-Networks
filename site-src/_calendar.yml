@@ -1,0 +1,33 @@
+# Semester configuration for the generated calendar (site/calendar.md).
+# Edit these values, then run: python tools/scripts/build_site_docs.py
+# and rebuild the site. See calendar.md for the full option reference.
+
+semester_start: "2026-09-14"   # any lecture day in week 1 (Monday here)
+lecture_days: [Mon, Wed]       # two teaching days per week
+lectures_per_week: 2           # 32 lectures / 16 weeks
+holidays: []                   # e.g. ["2026-11-09"]
+holiday_labels: {}             # e.g. {"2026-11-09": "University holiday"}
+cancellations: {}              # pre-known cancellations by lecture number: {"L07": "2026-10-14"}
+makeups: {}                    # e.g. {"L07": "moved to the lab block"}
+
+# Assessment dates: leave a field empty to use the strategy/syllabus default.
+# Lecture refs (L16) resolve to computed dates; week refs (W10) resolve to the
+# week-of date. Never invent institutional dates — fill these in per semester.
+assessment_dates:
+  quiz_windows: ""             # e.g. "W4 and W12, in lecture"
+  midterm_lecture: ""          # lecture hosting the 90-min midterm (default L16)
+  subnetting_due: ""           # default L16
+  cs02_due: ""                 # default L16
+  cs03_evidence: ""            # default L23
+  cs03_diagnosis: ""           # default L26
+  cs03_rca: ""                 # default L29
+  transport_spec: ""           # default L20
+  transport_demo: ""           # default L24
+  capstone_design: ""          # default W13
+  capstone_demo: ""            # default W15
+  capstone_defense: ""         # default L32
+  finals_note: ""              # e.g. "finals week (per university calendar)"
+
+# Extra per-lecture notes, merged over the strategy-derived defaults:
+# lecture_notes:
+#   "L11": "Wi-Fi survey fieldwork — bring laptops"

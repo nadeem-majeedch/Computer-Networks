@@ -1,0 +1,10 @@
+# Computer Networks course site — install with:
+#   python -m venv .venv && .venv/Scripts/pip install -r requirements.txt   (Windows)
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt     (Linux/macOS)
+# Versions verified in a clean venv (2026-09-20); floor constraints, no pins, for future-proofing.
+mkdocs>=1.6
+mkdocs-material>=9.5
+mkdocs-gen-files>=0.5
+mkdocs-literate-nav>=0.6
+mkdocs-section-index>=0.3
+pymdown-extensions>=10.0
